@@ -1,0 +1,22 @@
+.intro {
+    height: 100vh;
+    background-image: url(../img/intro-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 100%;
+}
+
+.intro .container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 170px;
+}
+
+.intro .container h2 {
+    font-size: 40px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 115.4%;
+    letter-spacing: -.03em;
+    text-shadow: 0 16px 25px red;
+}
