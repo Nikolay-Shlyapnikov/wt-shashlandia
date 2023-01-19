@@ -1,16 +1,17 @@
 .about {
-    padding: 78px 0;
+    padding: 78px 0 50px;
 }
 
 .about .container {
     display: flex;
+    justify-content: space-between;
 }
 
 .about .container .left-wrapper p:nth-child(2) {
     margin-top: 45px;
     font-size: 24px;
     font-weight: 500;
-    line-height: 20px;
+    line-height: 28px;
     letter-spacing: -.03em;
     color: #2a2a2a;
 }

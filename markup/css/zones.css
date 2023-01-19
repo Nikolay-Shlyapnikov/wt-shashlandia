@@ -1,0 +1,52 @@
+.zones {
+    padding: 50px 0;
+}
+
+.zones .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.zones .planet {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/planet.svg);
+    background-size: contain;
+    background-position: center;
+}
+
+.zones h2 {
+    margin: 48px 0;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.zones p:nth-child(3),
+.zones p:nth-child(4) {
+    font-size: 24px;
+    font-weight: 400;
+    color: #484848;
+}
+
+.zones p:nth-child(4) {
+    margin: 24px 0;
+}
+
+.zones a {
+    align-self: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    /* width: 189px; */
+    height: 27px;
+    box-sizing: content-box;
+    margin-top: 80px;
+    padding: 13px 30px;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100px;
+    background-color: red;
+}
