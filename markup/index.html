@@ -4,112 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Шашландия | О нас</title>
+    <title>Шашландия | Главная</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/intro.css">
-    <link rel="stylesheet" href="./css/about.css">
-    <link rel="stylesheet" href="./css/features.css">
-    <link rel="stylesheet" href="./css/zones.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300,500,700,800&display=swap" rel="stylesheet">
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300,500,700,800&display=swap" rel="stylesheet">-->
 </head>
 <body>
 
-    <main>
-        <section class="intro">
-            <div class="container">
-                <h2>Информация о нас</h2>
+    <header class="page-header">
+        <div class="page-header__wrapper">
+            <div class="page-header__burger">
+                <span></span>
             </div>
-        </section>
-
-        <section class="about">
-            <div class="container">
-                <h2 class="visually-hidden">Шашландия</h2>
-                <div class="left-wrapper">
-                    <img src="./img/about-text.svg" width="559" height="106" alt="">
-                    
-                    <p>Это лидер среди сервисов организации Ваших пикников!</p>
-                    <p>Наш сервис доставки «Шашландия» привезет Вам все самое необходимое для шашлыка и пикника; мясо, овощи, мангал, уголь, воду.</p>
-                    <p>Где бы Вы ни находились, дома или уже на природе, мы доставим Вам мясо высшего сорта и все самое необходимое для приготовления шашлыка максимально быстро</p>
-    
-                    <p>Используем только фермерское мясо.</p>
-                    <p>Маринуем по фирменному рецепту.</p>
-                </div>
-                <div class="right-wrapper">
-                    <div class="barbecue-img"></div>
-                </div>
+            <div class="page-header__logo">
+                <img src="./img/header_logo.svg" alt="" srcset="">
             </div>
-        </section>
-
-        <section class="features">
-            <div class="container">
-                <h2 class="visually-hidden">Особенности</h2>
+            <nav class="page-header__nav">
                 <ul>
-                    <li>
-                        <div class="icon"></div>
-                        <p>Зона доставки Москва<br>и Московская область</p>
-                    </li>
-                    <li>
-                        <div class="icon"></div>
-                        <p>Фермерское<br>производство</p>
-                    </li>
-                    <li>
-                        <div class="icon"></div>
-                        <p>Доставим заказ 24/7<br>в установленное время</p>
-                    </li>
-                    <li>
-                        <div class="icon"></div>
-                        <p>Контроль<br>качества</p>
-                    </li>
-                    <li>
-                        <div class="icon"></div>
-                        <p>8 лет<br>на рынке</p>
-                    </li>
-                    <li>
-                        <div class="icon"></div>
-                        <p>Без ГМО<br>и добавок</p>
-                    </li>
+                    <li><a href="#" class="page-header__item">Главная</a></li>
+                    <li><a href="#" class="page-header__item">О нас</a></li>
+                    <li><a href="#" class="page-header__item">Оплата и доставка</a></li>
+                    <li><a href="#" class="page-header__item">Контакты</a></li>
                 </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="delivery-meat">
+            <h1 class="delivery-meat__title">Доставим всё для шашлыка и пикника</h1>
+            <a href="#category" class="primary-button delivery-meat__button">Начать покупки</a>
+            <video src=""></video>
+        </section>
+
+        <section id="category" class="category">
+            <h2 class="category__title">Категории</h2>
+            <div class="category__wrapper">
+                <div class="category__item-wrapper">
+                    <a class="category__item" href="#">
+                        <h3 class="category__item-title">Мясо</h3>
+                        <p class="category__item-text">Для всех вкусовых предпочтений</p>
+                        <img class="category__item-image" src="" alt="" srcset="">
+                    </a>
+                    <a class="category__item" href="#">
+                        <!-- <div class="category__item"> -->
+                            <h3 class="category__item-title">Овощи</h3>
+                            <p class="category__item-text">Всегда самые свежие</p>
+                            <img class="category__item-image" src="" alt="" srcset="">
+                        <!-- </div> -->
+                    </a>
+                </div>
+
+                <div class="category__item-wrapper">
+                    <a class="category__item" href="#">
+                        <h3 class="category__item-title">Все для шашлыка</h3>
+                        <p class="category__item-text">Мангалы, уголь, вода, разжигательная смесь</p>
+                        <img class="category__item-image" src="" alt="" srcset="">
+                    </a>
+                </div>
+
+                <div class="category__item-wrapper">
+                    <a class="category__item" href="#services">
+                        <h3 class="category__item-title">Услуги</h3>
+                        <p class="category__item-text">Профессиональный мангальщик</p>
+                        <img class="category__item-image" src="" alt="" srcset="">
+                    </a>
+                </div>
             </div>
         </section>
 
-        <section class="zones">
-            <div class="container">
-                <div class="planet"></div>
-                <h2>Зоны доставки</h2>
-                <p>Пунктуальность – наш конёк.<br>Поэтому мы всегда привозим<br>Ваш заказ вовремя!</p>
-                <p>Наша курьерская служба работает как<br>часы, составляя продуманные маршруты.<br>Курьеры всегда приезжают вовремя,<br>независимо от дорожной обстановки.</p>
-                <a href="#">
-                    На главную
-                    <svg
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        style="margin-left: 15px; width: 15px; height: 15px;"
-                    >
-                        <path d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"></path>
-                    </svg>
-                </a>
+        <section id="services" class="services">
+            <h2 class="services__title">Дополнительные услуги</h2>
+            <div class="services__wrapper">
+                <div class="services__text">
+                    <h3 class="services__text-title">Профессиональный мангальщик</h3>
+                    <p class="services__text-text">Профессиональный мангальщик, позаботится о Вашем времени и возьмёт всю работу по приготовлению шашлыка на себя. А Вы в это время сможете отдыхать и наслаждаться компанией родных и друзей.</p>
+                </div>
+                <img class="services__image" src="" alt="">
+
+                <div class="services__info">
+                    <div class="services__info-name">Мангальщик</div>
+                    <div class="services__info-price">
+                        <svg
+                            focusable="false"
+                            aria-hidden="true"
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M13.5 3H7v9H5v2h2v2H5v2h2v3h2v-3h4v-2H9v-2h4.5c3.04 0 5.5-2.46 5.5-5.5S16.54 3 13.5 3zm0 9H9V5h4.5C15.43 5 17 6.57 17 8.5S15.43 12 13.5 12z"></path>
+                        </svg>
+                        <span>1750</span>
+                    </div>
+                    <div class="services__info-time">
+                        <svg
+                            focusable="false"
+                            aria-hidden="true"
+                            viewBox="0 0 24 24"
+                        >
+                            <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"></path>
+                            <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"></path>
+                        </svg>
+                        <span>1 час</span>
+                    </div>
+                    <button class="services__button">Нанять</button>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="page-footer">
         <div class="container">
-            <div class="row">
+            <div class="row-top">
                 <div class="left-wrapper">
-                    <h3>Контакты</h2>
+                    <h3>Контакты</h3>
                     <p>24 часа</p>
                     <a href="tel:84951396444">8(495)139-64-44</a>
                     <a href="mailto:dostavka@tyteda.ru">dostavka@tyteda.ru</a>
                     <p>г. Москва, Сталеваров ул., д.14, корпус 1</p>
                 </div>
-    
+
                 <div class="center-wrapper">
-                    <h3><span>tyteda</span> | Шашландия</h2>
+                    <h3><span>tyteda</span> | Шашландия</h3>
                     <ul>
                         <li><a href="#">Главная</a></li>
                         <li><a href="#">О нас</a></li>
@@ -118,9 +136,9 @@
                         <li><a href="#">Политика конфиденциальности</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="right-wrapper">
-                    <h3>Дополнительные услуги</h2>
+                    <h3>Дополнительные услуги</h3>
                     <ul>
                         <li><a href="#">Доставка готовой еды</a></li>
                         <li><a href="#">Корпоративного питание</a></li>
@@ -129,14 +147,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="row">
+            <div class="row-bottom">
                 <div class="copyright">
                     <p>ООО "БКФ" ОГРН: 5177746201221 ИНН: 7720402524, Не является публичной офертой, Copyright © tyteda.ru 2023.</p>
-                    <p>Сделано WETOP digital agency</p>
+                    <p>Сделано <a href="https://wetop.ru"><span>wetop</span> digital agency</a></p>
                 </div>
             </div>
         </div>
     </footer>
-    
+
+    <script src="./script.js"></script>
 </body>
 </html>
