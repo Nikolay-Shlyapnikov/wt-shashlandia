@@ -1,15 +1,10 @@
 .payment {
-    padding-top: 100px;
+    padding-top: 130px;
     padding-bottom: 50px;
 }
 
-.payment .container {
-    /* display: flex; */
-    /* justify-content: space-between; */
-}
-
 .payment h1 {
-    font-size: 50px;
+    font-size: 40px;
     font-weight: 400;
     text-align: center;
 }
@@ -18,7 +13,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0;
-    margin-top: 35px;
+    margin-top: 40px;
     padding: 0;
     list-style: none;
 }
@@ -29,6 +24,11 @@
     border-radius: 10px;
     border: 1px dashed #000;
     background-color: #fff;
+    transition-duration: 300ms;
+}
+
+.payment .container > ul > li:hover {
+    transform: translateY(-10px);
 }
 
 .payment ul li h3 {

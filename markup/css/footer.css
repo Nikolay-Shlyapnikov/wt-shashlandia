@@ -1,8 +1,7 @@
 .page-footer {
     background-color: #fff;
-    box-shadow:
-        0 1px 2px 0 rgb(60 64 67 / 30%),
-        0 2px 6px 2px rgb(60 64 67 / 15%);
+    padding-top: 30px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 
 .page-footer .row-top {
@@ -18,10 +17,12 @@
 }
 
 .page-footer .row-top > div h3 {
-    margin: 20px;
+    margin-bottom: 15px;
     font-size: 20px;
     font-weight: 500;
-    color: #2a2a2a;
+    color: #000 !important;
+    text-decoration: underline;
+    text-decoration-color: rgb(42, 42, 42);
 }
 
 .page-footer .row-top .left-wrapper p,
@@ -30,8 +31,37 @@
     color: #2a2a2a;
 }
 
-.page-footer .row-top .center-wrapper h3 span {
+.page-footer .row-top .center-wrapper {
+    position: relative;
+}
+
+.page-footer .row-top .center-wrapper::before,
+.page-footer .row-top .center-wrapper::after {
+    /* content: ''; */
+    position: absolute;
+    top: 0;
+    width: 10px;
+    height: 100%;
+    transform: scaleY(0.6);
+}
+
+.page-footer .row-top .center-wrapper::before {
+    left: 0;
+    border-left: 2px solid rgb(42, 42, 42);
+}
+
+.page-footer .row-top .center-wrapper::after {
+    right: 0;
+    border-right: 2px solid rgb(42, 42, 42);
+}
+
+.page-footer .row-top .center-wrapper h3 span:nth-child(1) {
+    color: #4FD520;
     text-transform: uppercase;
+}
+
+.page-footer .row-top .center-wrapper h3 span:nth-child(2) {
+    color: #E70000;
 }
 
 .page-footer .row-top > div ul {

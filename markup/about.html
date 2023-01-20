@@ -6,23 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шашландия | О нас</title>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/delivery-meat.css">
     <link rel="stylesheet" href="./css/intro.css">
     <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="./css/features.css">
     <link rel="stylesheet" href="./css/zones.css">
-    <link rel="stylesheet" href="./css/footer.css">
 
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com"> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300,500,700,800&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300,500,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <main>
-        <section class="intro">
-            <div class="container">
-                <h2>Информация о нас</h2>
+    <header class="page-header">
+        <div class="page-header__wrapper">
+            <div class="page-header__burger">
+                <span></span>
             </div>
+            <div class="page-header__logo">
+                <a href="./index.html">
+                    <img src="./img/header_logo.svg" alt="" srcset="">
+                </a>
+            </div>
+            <nav class="page-header__nav">
+                <ul class="page-header__nav-list">
+                    <li><a href="./index.html" class="page-header__item">Главная</a></li>
+                    <li><a href="./about.html" class="page-header__item">О нас</a></li>
+                    <li><a href="./payment.html" class="page-header__item">Оплата и доставка</a></li>
+                    <li><a href="./contacts.html" class="page-header__item">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="delivery-meat">
+            <div class="delivery-meat__wrapper">
+                <div class="delivery-meat__info">
+                    <h1 class="delivery-meat__title">Информация о нас</h1>
+                    <!-- <a href="#category" class="primary-button delivery-meat__button">Начать покупки</a> -->
+                </div>
+                <!-- <video class="delivery-meat__video" autoplay muted loop src="./video/delivery-meat.mp4"></video> -->
+            </div>
+            <div id="category" class="invisible-separator"></div>
         </section>
 
         <section class="about">
@@ -82,17 +110,7 @@
                 <h2>Зоны доставки</h2>
                 <p>Пунктуальность – наш конёк.<br>Поэтому мы всегда привозим<br>Ваш заказ вовремя!</p>
                 <p>Наша курьерская служба работает как<br>часы, составляя продуманные маршруты.<br>Курьеры всегда приезжают вовремя,<br>независимо от дорожной обстановки.</p>
-                <a href="#">
-                    На главную
-                    <svg
-                        focusable="false"
-                        aria-hidden="true"
-                        viewBox="0 0 24 24"
-                        style="margin-left: 15px; width: 15px; height: 15px;"
-                    >
-                        <path d="M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"></path>
-                    </svg>
-                </a>
+                <a href="#">На главную</a>
             </div>
         </section>
     </main>
@@ -109,7 +127,7 @@
                 </div>
     
                 <div class="center-wrapper">
-                    <h3><span>tyteda</span> | Шашландия</h3>
+                    <h3><span>tyteda</span> | <span>Шашландия</span></h3>
                     <ul>
                         <li><a href="./index.html">Главная</a></li>
                         <li><a href="./about.html">О нас</a></li>
@@ -138,5 +156,6 @@
         </div>
     </footer>
 
+    <script src="./js/script.js"></script>
 </body>
 </html>

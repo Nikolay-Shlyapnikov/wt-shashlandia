@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Шашландия | Контакты</title>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/contacts.css">
+    <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/contacts.css">
 
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=55502ef1-cee4-46e9-83bb-5c1c9c45ce97" type="text/javascript"></script>
@@ -26,6 +27,27 @@
     <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300,500,700,800&display=swap" rel="stylesheet"> -->
 </head>
 <body>
+
+    <header class="page-header">
+        <div class="page-header__wrapper">
+            <div class="page-header__burger">
+                <span></span>
+            </div>
+            <div class="page-header__logo">
+                <a href="./index.html">
+                    <img src="./img/header_logo.svg" alt="" srcset="">
+                </a>
+            </div>
+            <nav class="page-header__nav">
+                <ul class="page-header__nav-list">
+                    <li><a href="./index.html" class="page-header__item">Главная</a></li>
+                    <li><a href="./about.html" class="page-header__item">О нас</a></li>
+                    <li><a href="./payment.html" class="page-header__item">Оплата и доставка</a></li>
+                    <li><a href="./contacts.html" class="page-header__item">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <section class="contacts">
@@ -64,7 +86,7 @@
                 </div>
     
                 <div class="center-wrapper">
-                    <h3><span>tyteda</span> | Шашландия</h3>
+                    <h3><span>tyteda</span> | <span>Шашландия</span></h3>
                     <ul>
                         <li><a href="./index.html">Главная</a></li>
                         <li><a href="./about.html">О нас</a></li>
@@ -93,5 +115,6 @@
         </div>
     </footer>
 
+    <script src="./js/script.js"></script>
 </body>
 </html>

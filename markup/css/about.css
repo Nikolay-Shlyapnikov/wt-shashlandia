@@ -43,4 +43,9 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    transition-duration: 800ms;
+}
+
+.about .container .right-wrapper .barbecue-img:hover {
+    transform: rotate(360deg);
 }
