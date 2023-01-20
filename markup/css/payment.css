@@ -60,3 +60,11 @@
     display: flex;
     justify-content: center;
 }
+
+#map {
+    width: 70%;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px dashed #000;
+    overflow: hidden;
+}
