@@ -1,0 +1,116 @@
+.page-header {
+    background: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px)
+}
+
+.page-header__wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.page-header__burger {
+    position: relative;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 26.25px;
+    height: 17.5px;
+    margin: 20px;
+}
+
+.page-header__burger::after,
+.page-header__burger::before,
+.page-header__burger>span {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: #e53935;
+    transition: all 0.4s;
+}
+
+.page-header__burger::before {
+    position: absolute;
+    top: 0px;
+}
+
+.page-header__burger::after {
+    position: absolute;
+    bottom: 0px;
+}
+
+.page-header__burger.active>span {
+    transform: scale(0)
+}
+
+.page-header__burger.active::after,
+.page-header__burger.active::before {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.page-header__burger.active::after {
+    transform: rotate(45deg);
+}
+
+.page-header__burger.active::before {
+    transform: rotate(-45deg);
+}
+
+.page-header__nav {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+    transform: translateY(-100%);
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
+}
+
+.page-header__nav-list {
+    display: flex;
+    list-style: none;
+}
+
+.page-header__item {
+    text-decoration: none;
+    color: white;
+    margin: 5px 10px;
+    font-family: Inter, sans-serif;
+}
+
+.page-header__nav.active {
+    transform: translateY(0%);
+}
+
+.page-header__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transition: all 0.4s;
+    transform: translate(-50%, -50%);
+    width: calc(240px + 60*(100vw/1200));
+}
+
+.page-header__logo.active {
+    top: -100%;
+}
+
+.page-header__logo>img {
+    width: 100%;
+    height: auto;
+}
