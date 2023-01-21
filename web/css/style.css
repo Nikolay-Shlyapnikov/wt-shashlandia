@@ -37,3 +37,8 @@ h1, h2, h3 {
 p {
     margin: 0;
 }
+
+.page-header__item--active a {
+    color: red !important;
+    text-decoration: underline !important;
+}

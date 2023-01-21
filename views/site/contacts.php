@@ -2,11 +2,10 @@
 
 /** @var yii\web\View $this */
 
-$this->title = Yii::$app->name . ' | Контакты';
+use app\assets\ContactsAsset;
 
-$this->registerCssFile('css/contacts.css');
-$this->registerJsFile('https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=55502ef1-cee4-46e9-83bb-5c1c9c45ce97');
-$this->registerJsFile('js/mapbasics.js');
+$this->title = Yii::$app->name . ' | Контакты';
+ContactsAsset::register($this);
 
 ?>
 <section class="contacts">
@@ -21,11 +20,10 @@ $this->registerJsFile('js/mapbasics.js');
                     <p>Без выходных</p>
 
                     <h3>Адрес:</h3>
-                    <p>г. Москва, ул. Сталеваров, дом 14, корпус 1</p>
+                    <p><?= Yii::$app->params['contacts'][2]['value'] ?></p>
 
                     <h3>Свяжитесь с нами:</h3>
-                    <a href="tel:+74951396444">+7 (495) 139-64-44</a>
-                    <a href="mailto:dostavka@tyteda.ru">dostavka@tyteda.ru</a>
+                    <?= $this->render('/partials/_contacts.php') ?>
                 </div>
             </div>
         </div>

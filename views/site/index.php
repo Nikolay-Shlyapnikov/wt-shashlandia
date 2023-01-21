@@ -2,11 +2,10 @@
 
 /** @var yii\web\View $this */
 
-$this->title = Yii::$app->name . ' | Главная';
+use app\assets\IndexAsset;
 
-$this->registerCssFile('css/delivery-meat.css');
-$this->registerCssFile('css/category.css');
-$this->registerCssFile('css/services.css');
+$this->title = Yii::$app->name . ' | Главная';
+IndexAsset::register($this);
 
 ?>
 
@@ -16,7 +15,7 @@ $this->registerCssFile('css/services.css');
             <h1 class="delivery-meat__title">Доставим всё для<br> шашлыка и пикника</h1>
             <a href="#category" class="primary-button delivery-meat__button">Начать покупки</a>
         </div>
-        <video class="delivery-meat__video" autoplay muted loop src="./video/delivery-meat.mp4"></video>
+        <video class="delivery-meat__video" autoplay muted loop src="<?= Yii::getAlias('@videos') ?>/delivery-meat.mp4"></video>
     </div>
     <div id="category" class="invisible-separator"></div>
 </section>

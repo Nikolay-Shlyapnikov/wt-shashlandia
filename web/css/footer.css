@@ -106,8 +106,3 @@
 .page-footer .row-bottom .copyright p:nth-child(2) a span {
     text-transform: uppercase;
 }
-
-.active a {
-    color: red !important;
-    text-decoration: underline !important;
-}
