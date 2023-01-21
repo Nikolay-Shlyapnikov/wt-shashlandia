@@ -2,8 +2,23 @@
 
 /** @var yii\web\View $this */
 
-use yii\helpers\Url;
+use yii\helpers\Html;
 use yii\widgets\Menu;
+
+$menuItems = [
+    ['label' => 'Главная', 'url' => ['site/index']],
+    ['label' => 'О нас', 'url' => ['site/about']],
+    ['label' => 'Оплата и доставка', 'url' => ['site/payment']],
+    ['label' => 'Контакты', 'url' => ['site/contacts']],
+    ['label' => 'Политика конфиденциальности', 'url' => ['site/policy']],
+];
+
+$servicesItems = [
+    ['label' => 'Доставка готовой еды', 'url' => '#'],
+    ['label' => 'Корпоративного питание', 'url' => '#'],
+    ['label' => 'Везу банкет', 'url' => '#'],
+    ['label' => 'Доставка поминальных обедов', 'url' => '#'],
+];
 
 ?>
 <footer class="page-footer">
@@ -12,44 +27,25 @@ use yii\widgets\Menu;
             <div class="left-wrapper">
                 <h3>Контакты</h3>
                 <p>24 часа</p>
-                <a href="tel:84951396444">8(495)139-64-44</a>
-                <a href="mailto:dostavka@tyteda.ru">dostavka@tyteda.ru</a>
-                <p>г. Москва, Сталеваров ул., д.14, корпус 1</p>
+                <a href="tel:<?= Yii::$app->params['contacts'][0] ?>"><?= Yii::$app->params['contacts'][0] ?></a>
+                <a href="mailto:<?= Yii::$app->params['contacts'][1] ?>"><?= Yii::$app->params['contacts'][1] ?></a>
+                <p><?= Yii::$app->params['contacts'][2] ?></p>
             </div>
 
             <div class="center-wrapper">
-                <h3><span>tyteda</span> | <span>Шашландия</span></h3>
-
-                <?php
-                $menuItems = [
-                    ['label' => 'Главная', 'url' => ['site/index']],
-                    ['label' => 'О нас', 'url' => ['site/about']],
-                    ['label' => 'Оплата и доставка', 'url' => ['site/payment']],
-                    ['label' => 'Контакты', 'url' => ['site/contacts']],
-                    ['label' => 'Политика конфиденциальности', 'url' => ['site/policy']],
-                ];
-                ?>
-
-                <?= Menu::widget([
-                    'items' => $menuItems,
-                    'activeCssClass' => 'active',
-                ]); ?>
+                <h3><span>tyteda</span> | <span><?= Html::encode(Yii::$app->name) ?></span></h3>
+                <?= Menu::widget(['items' => $menuItems, 'activeCssClass' => 'active']) ?>
             </div>
 
             <div class="right-wrapper">
                 <h3>Дополнительные услуги</h3>
-                <ul>
-                    <li><a href="#">Доставка готовой еды</a></li>
-                    <li><a href="#">Корпоративного питание</a></li>
-                    <li><a href="#">Везу банкет</a></li>
-                    <li><a href="#">Доставка поминальных обедов</a></li>
-                </ul>
+                <?= Menu::widget(['items' => $servicesItems]) ?>
             </div>
         </div>
         <div class="row-bottom">
             <div class="copyright">
-                <p>ООО "БКФ" ОГРН: 5177746201221 ИНН: 7720402524, Не является публичной офертой, Copyright &copy; tyteda.ru 2023.</p>
-                <p>Сделано <a href="https://wetop.ru"><span>wetop</span> digital agency</a></p>
+                <p><?= Yii::$app->params['copyright'][0] ?></p>
+                <p><?= Yii::$app->params['copyright'][1] ?></p>
             </div>
         </div>
     </div>
