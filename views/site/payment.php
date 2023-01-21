@@ -20,11 +20,13 @@ PaymentAsset::register($this);
 
                     <?php if (isset($item['icons'])): ?>
                         <ul>
+
                             <?php foreach ($item['icons'] as $icon): ?>
                                 <li>
                                     <img src="<?= Yii::getAlias('@images') . '/' . $icon['src'] ?>" width="<?= $icon['width'] ?>" alt="">
                                 </li>
                             <?php endforeach; ?>
+
                         </ul>
                     <?php endif; ?>
 
@@ -38,6 +40,5 @@ PaymentAsset::register($this);
 <section class="map">
     <div class="container">
         <div id="map"></div>
-        <!-- <input type="button" id="destroyButton" value="Удалить карту"/> -->
     </div>
 </section>
