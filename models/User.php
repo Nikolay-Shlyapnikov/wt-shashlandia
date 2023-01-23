@@ -66,8 +66,8 @@ class User extends ActiveRecord implements IdentityInterface
             [['password_hash'], 'required'],
             [['password_hash'], 'string', 'max' => 128],
 
-            [['password_hash'], 'required'],
-            [['password_hash'], 'boolean'],
+            [['is_admin'], 'required'],
+            [['is_admin'], 'boolean'],
         ];
     }
 
