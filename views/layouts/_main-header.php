@@ -12,7 +12,7 @@ use yii\widgets\Menu;
         </div>
         <div class="page-header__logo">
             <a href="<?= Yii::$app->homeUrl ?>">
-                <img src="<?= Yii::getAlias('@images') ?>/header-logo.svg" alt="" srcset="">
+                <img src="<?= Yii::getAlias('@images') ?>/header-logo.svg" alt="">
             </a>
         </div>
         <nav class="page-header__nav">

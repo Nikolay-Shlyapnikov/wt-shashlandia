@@ -5,13 +5,6 @@
 use yii\helpers\Html;
 use yii\widgets\Menu;
 
-$servicesItems = [
-    ['label' => 'Доставка готовой еды', 'url' => '#'],
-    ['label' => 'Корпоративного питание', 'url' => '#'],
-    ['label' => 'Везу банкет', 'url' => '#'],
-    ['label' => 'Доставка поминальных обедов', 'url' => '#'],
-];
-
 ?>
 <footer class="page-footer">
     <div class="container">
@@ -34,7 +27,7 @@ $servicesItems = [
 
             <div class="right-wrapper">
                 <h3>Дополнительные услуги</h3>
-                <?= Menu::widget(['items' => $servicesItems]) ?>
+                <?= Menu::widget(['items' => Yii::$app->params['servicesItems']]) ?>
             </div>
         </div>
         <div class="row-bottom">

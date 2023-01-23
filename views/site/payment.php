@@ -23,7 +23,7 @@ PaymentAsset::register($this);
 
                             <?php foreach ($item['icons'] as $icon): ?>
                                 <li>
-                                    <img src="<?= Yii::getAlias('@images') . '/' . $icon['src'] ?>" width="<?= $icon['width'] ?>" alt="">
+                                    <img src="<?= Yii::getAlias('@images') . "/{$icon['src']}" ?>" width="<?= $icon['width'] ?>" alt="">
                                 </li>
                             <?php endforeach; ?>
 

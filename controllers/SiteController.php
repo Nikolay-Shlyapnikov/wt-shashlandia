@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Category;
 use Yii;
 use yii\web\Controller;
 
@@ -18,7 +19,11 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $catogories = Category::find()->all();
+
+        return $this->render('index', [
+            'categories' => $catogories
+        ]);
     }
 
     public function actionAbout()

@@ -1,8 +1,11 @@
 <?php
 
 /** @var yii\web\View $this */
+/** @var app\models\Category[] $categories */
 
 use app\assets\IndexAsset;
+use yii\helpers\Html;
+use yii\helpers\Json;
 
 $this->title = Yii::$app->name . ' | Главная';
 IndexAsset::register($this);
@@ -24,39 +27,28 @@ IndexAsset::register($this);
     <div class="container">
         <h2 class="category__title">Категории</h2>
         <div class="category__wrapper">
-            <div class="category__item-wrapper">
-                <a class="category__item pink" href="#">
-                    <h3 class="category__item-title">Мясо</h3>
-                    <p class="category__item-text">Для всех вкусовых предпочтений</p>
-                    <div class="category__item-image cart1"></div>
-                </a>
-                <a class="category__item yellow" href="#">
-                    <h3 class="category__item-title">Овощи</h3>
-                    <p class="category__item-text">Всегда самые свежие</p>
-                    <div class="category__item-image cart2"></div>
 
-                </a>
-            </div>
+            <?php foreach ($categories as $category): ?>
+                <?php [$top, $bottom] = array_values(Json::decode($category['wrapper'])); ?>
 
-            <div class="category__item-wrapper">
-                <a class="category__item blue" href="#">
-                    <h3 class="category__item-title">Все для шашлыка</h3>
-                    <p class="category__item-text">Мангалы, уголь, вода, разжигательная смесь</p>
-                    <div class="category__item-image cart3"></div>
+                <?php if ($top): ?>
+                    <div class="category__item-wrapper">
+                <?php endif; ?>
 
+                <a class="category__item <?= Html::encode($category['modifier']) ?>" href="#">
+                    <h3 class="category__item-title"><?= Html::encode($category['title']) ?></h3>
+                    <p class="category__item-text"><?= $category['desc'] ?></p>
+                    <div class="category__item-image"></div>
                 </a>
-            </div>
 
-            <div class="category__item-wrapper">
-                <a class="category__item green" href="#services">
-                    <h3 class="category__item-title">Услуги</h3>
-                    <p class="category__item-text">Профессиональный мангальщик</p>
-                    <div class="category__item-image cart4"></div>
-                </a>
-            </div>
+                <?php if ($bottom): ?>
+                    </div>
+                <?php endif; ?>
+
+            <?php endforeach; ?>
+
         </div>
     </div>
-
 </section>
 
 <section id="services" class="services">
@@ -70,6 +62,7 @@ IndexAsset::register($this);
 
             <div class="services__image"></div>
             <div class="services__info">
+
                 <div class="services__info-wrapper">
                     <div class="services__info-name">Мангальщик</div>
                     <div class="services__info-price">
