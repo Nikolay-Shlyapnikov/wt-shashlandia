@@ -4,6 +4,7 @@
 
 html {
     scroll-behavior: smooth;
+    width: 100%;
 }
 
 body {
@@ -41,4 +42,24 @@ p {
 .page-header__item--active a {
     color: red !important;
     text-decoration: underline !important;
+}
+.primary-button{
+    align-self: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 27px;
+    box-sizing: content-box;
+    margin-top: 80px;
+    padding: 13px 50px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100px;
+    background-color: red;
+    transition-duration: 300ms;
+}
+.primary-button:hover{
+    padding: 13px 80px;
 }

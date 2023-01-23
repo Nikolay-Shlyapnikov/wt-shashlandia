@@ -37,24 +37,3 @@
     margin: 24px 0;
 }
 
-.zones a {
-    align-self: center;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    height: 27px;
-    box-sizing: content-box;
-    margin-top: 80px;
-    padding: 13px 50px;
-    font-size: 20px;
-    font-weight: 800;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 100px;
-    background-color: red;
-    transition-duration: 300ms;
-}
-
-.zones a:hover {
-    padding: 13px 80px;
-}

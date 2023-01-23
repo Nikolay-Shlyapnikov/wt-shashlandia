@@ -48,23 +48,46 @@
     flex-grow: 1;
 }
 
-.category__item.pink {
+.category__item--meat {
     background: #ffbfa3;
 }
-
-.category__item.yellow {
+.category__item--meat .category__item-image{
+    background-image: url(../img/category_meat.png);
+    bottom: -10px;
+    right: 10px;
+    width: 300px;
+    height: 174px;
+}
+.category__item--vegetables {
     margin-top: 10px;
     background: #f9fe97;
 }
-
-.category__item.blue {
+.category__item--vegetables .category__item-image{
+    background-image: url(../img/category_vegetables.png);
+    bottom: -10px;
+    right: 10px;
+    width: 300px;
+    height: 194px;
+}
+.category__item--kebab {
     background: #c9d2da;
 }
-
-.category__item.green {
-    background: #baefa4;
+.category__item--kebab .category__item-image{
+    background-image: url(../img/category_kebab.png);
+    width: 300px;
+    height: 300px;
 }
 
+.category__item--services {
+    background: #baefa4;
+}
+.category__item--services .category__item-image{
+    background-image: url(../img/category_services.png);
+    bottom: -10px;
+    right: 10px;
+    width: 340px;
+    height: 378px;
+}
 .category__item-title {
     font-weight: 600;
     font-size: 35px;
@@ -84,32 +107,3 @@
     background-size: cover;
 }
 
-.category__item-image.cart1 {
-    background-image: url(../img/category_cart1.png);
-    bottom: -10px;
-    right: 10px;
-    width: 300px;
-    height: 174px;
-}
-
-.category__item-image.cart2 {
-    background-image: url(../img/category_cart2.png);
-    bottom: -10px;
-    right: 10px;
-    width: 300px;
-    height: 194px;
-}
-
-.category__item-image.cart3 {
-    background-image: url(../img/category_cart3.png);
-    width: 300px;
-    height: 300px;
-}
-
-.category__item-image.cart4 {
-    background-image: url(../img/category_cart4.png);
-    bottom: -10px;
-    right: 10px;
-    width: 340px;
-    height: 378px;
-}
