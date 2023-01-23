@@ -35,7 +35,7 @@ IndexAsset::register($this);
                     <div class="category__item-wrapper">
                 <?php endif; ?>
 
-                <a class="category__item <?= Html::encode($category['modifier']) ?>" href="#">
+                <a class="category__item category__item--<?= Html::encode($category['modifier']) ?>" href="#">
                     <h3 class="category__item-title"><?= Html::encode($category['title']) ?></h3>
                     <p class="category__item-text"><?= $category['desc'] ?></p>
                     <div class="category__item-image"></div>
