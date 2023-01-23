@@ -22,6 +22,7 @@ return [
             'protocol' => null,
         ],
     ],
+    'menuItemActive' => 'page-header__item--active',
     'menuItems' => [
         ['label' => 'Главная', 'url' => ['site/index']],
         ['label' => 'О нас', 'url' => ['site/about']],
@@ -29,7 +30,12 @@ return [
         ['label' => 'Контакты', 'url' => ['site/contacts']],
         ['label' => 'Политика конфиденциальности', 'url' => ['site/policy']],
     ],
-    'menuItemActive' => 'page-header__item--active',
+    'servicesItems' => [
+        ['label' => 'Доставка готовой еды', 'url' => '#'],
+        ['label' => 'Корпоративного питание', 'url' => '#'],
+        ['label' => 'Везу банкет', 'url' => '#'],
+        ['label' => 'Доставка поминальных обедов', 'url' => '#'],
+    ],
     'features' => [
         'Зона доставки Москва<br>и Московская область',
         'Фермерское<br>производство',
