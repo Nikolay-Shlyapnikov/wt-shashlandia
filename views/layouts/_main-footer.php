@@ -16,7 +16,6 @@ use yii\widgets\Menu;
                 <?= $this->render('/partials/_contacts.php') ?>
 
             </div>
-
             <div class="center-wrapper">
                 <h3><span>tyteda</span> | <span><?= Html::encode(Yii::$app->name) ?></span></h3>
                 <?= Menu::widget([
@@ -24,7 +23,6 @@ use yii\widgets\Menu;
                     'activeCssClass' => Yii::$app->params['menuItemActive'],
                 ]) ?>
             </div>
-
             <div class="right-wrapper">
                 <h3>Дополнительные услуги</h3>
                 <?= Menu::widget(['items' => Yii::$app->params['servicesItems']]) ?>
