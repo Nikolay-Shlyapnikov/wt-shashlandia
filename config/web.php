@@ -54,6 +54,7 @@ $config = [
                 '/payment' => 'site/payment',
                 '/contacts' => 'site/contacts',
                 '/policy' => 'site/policy',
+                '/admin' => 'admin/index',
             ],
         ],
     ],
