@@ -30,3 +30,4 @@
          $this->dropTable('{{%category}}');
      }
  }
+
