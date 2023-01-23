@@ -22,7 +22,6 @@ IndexAsset::register($this);
     </div>
     <div id="category" class="invisible-separator"></div>
 </section>
-
 <section class="category">
     <div class="container">
         <h2 class="category__title">Категории</h2>
@@ -50,7 +49,6 @@ IndexAsset::register($this);
         </div>
     </div>
 </section>
-
 <section id="services" class="services">
     <div class="container">
         <h2 class="services__title">Дополнительные услуги</h2>
@@ -59,7 +57,6 @@ IndexAsset::register($this);
                 <h3 class="services__text-title">Профессиональный мангальщик</h3>
                 <p class="services__text-text">Профессиональный мангальщик, позаботится о Вашем времени и возьмёт всю работу по приготовлению шашлыка на себя. А Вы в это время сможете отдыхать и наслаждаться компанией родных и друзей.</p>
             </div>
-
             <div class="services__image"></div>
             <div class="services__info">
 
