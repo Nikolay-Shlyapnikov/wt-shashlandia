@@ -3,6 +3,7 @@
 /** @var yii\web\View $this */
 
 use app\assets\PaymentAsset;
+use yii\helpers\Html;
 
 $this->title = Yii::$app->name . ' | Оплата и доставка';
 PaymentAsset::register($this);
@@ -15,8 +16,8 @@ PaymentAsset::register($this);
 
             <?php foreach (Yii::$app->params['paymentItems'] as $item): ?>
                 <li>
-                    <h3><?= $item['title'] ?></h3>
-                    <p><?= $item['desc'] ?></p>
+                    <h3><?= Html::encode($item['title']) ?></h3>
+                    <p><?= Html::encode($item['desc']) ?></p>
 
                     <?php if (isset($item['icons'])): ?>
                         <ul>
