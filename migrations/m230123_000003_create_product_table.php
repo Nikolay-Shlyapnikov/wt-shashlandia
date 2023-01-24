@@ -23,7 +23,7 @@ class m230123_000003_create_product_table extends Migration
 
         // creates index for column 'category_id'
         $this->createIndex(
-            'idx-picture-category_id',
+            'idx-product-category_id',
             'product',
             'category_id'
         );

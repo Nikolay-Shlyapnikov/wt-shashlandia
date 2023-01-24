@@ -56,10 +56,7 @@ class AdminController extends Controller
 
                 if ($product->save()) {
                     Yii::$app->session->setFlash('success', 'This is the message');
-                    $productForm->title = '';
-                    $productForm->desc = '';
-                    $productForm->price = '';
-                    $productForm->category_id = '';
+                    $productForm->clean();
                 } else {
                     Yii::$app->session->setFlash('danger', 'This is the message');
                 }
