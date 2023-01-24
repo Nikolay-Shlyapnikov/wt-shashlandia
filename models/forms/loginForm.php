@@ -26,7 +26,7 @@ class LoginForm extends Model
     public function attributesLabels(): array
     {
         return [
-            'email' => 'E-mail',
+            'email' => 'Email',
             'password' => 'Пароль'
         ];
     }
