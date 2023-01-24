@@ -3,6 +3,8 @@
 namespace app\commands;
 
 use app\models\Category;
+use app\models\User;
+use Yii;
 use yii\console\Controller;
 use yii\console\ExitCode;
 use yii\helpers\Json;
@@ -38,6 +40,12 @@ class DataController extends Controller
                 'wrapper' => Json::encode(['top' => true, 'bottom' => true]),
             ],
         ];
+
+        $user = new User();
+        $user->email = 'test@example.com';
+        $user->password_hash = Yii::$app->security->generatePasswordHash('123');
+        $user->is_admin = true;
+        var_dump($user->save()) . "\n";
 
         foreach ($categories as $category) {
             $category_entity = new Category();
