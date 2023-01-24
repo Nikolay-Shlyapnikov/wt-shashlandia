@@ -11,7 +11,7 @@ $this->title = Yii::$app->name . ' | Вход';
 AdminAsset::register($this);
 
 ?>
-<div class="modal fade show" id="loginModal" style="display: block; color: #212529;">
+<div class="modal fade show" style="display: block;">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -22,7 +22,7 @@ AdminAsset::register($this);
                 <?php $form = ActiveForm::begin([
                     'action' => Url::to(['admin/login']),
                     // 'enableAjaxValidation' => true,
-                    'options' => ['novalidate' => true, 'autocomplete' => 'off'],
+                    'options' => ['novalidate' => true, 'autocomplete' => 'on'],
                     'fieldConfig' => [
                         'labelOptions' => ['class' => 'form-label'],
                         'inputOptions' => ['class' => 'form-control'],
