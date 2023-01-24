@@ -40,4 +40,11 @@ class ProductForm extends Model
             'price' => 'Price',
         ];
     }
+
+    public function clean(): void
+    {
+        foreach ($this->attributes() as $attribute) {
+            $this->{$attribute} = '';
+        }
+    }
 }
