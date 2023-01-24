@@ -49,12 +49,17 @@ $config = [
             'showScriptName' => false,
             'enableStrictParsing' => true,
             'rules' => [
+                // SiteController
                 '/' => 'site/index',
                 '/about' => 'site/about',
                 '/payment' => 'site/payment',
                 '/contacts' => 'site/contacts',
                 '/policy' => 'site/policy',
+
+                // AdminController
                 '/admin' => 'admin/index',
+                '/login' => 'admin/login',
+                '/logout' => 'admin/logout',
             ],
         ],
     ],
