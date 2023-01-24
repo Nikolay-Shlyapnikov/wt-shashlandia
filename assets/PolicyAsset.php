@@ -4,13 +4,12 @@ namespace app\assets;
 
 use yii\web\AssetBundle;
 
-class AdminAsset extends AssetBundle
+class PolicyAsset extends AssetBundle
 {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css',
-        'css/admin.css'
+        'css/policy.css',
     ];
     public $js = [
     ];
