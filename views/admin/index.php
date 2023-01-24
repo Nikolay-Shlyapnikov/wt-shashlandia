@@ -40,6 +40,13 @@ AdminAsset::register($this);
                     <?= $form->field($model, 'price')->textInput() ?>
                     <?= $form->field($model, 'category_id')->textInput() ?>
 
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Open this select menu</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
                     <div class="d-grid gap-2 mt-3">
                         <?= Html::submitButton('Войти', ['class' => 'btn btn-primary']) ?>
                     </div>
