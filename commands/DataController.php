@@ -2,60 +2,77 @@
 
 namespace app\commands;
 
-use app\models\Category;
-use app\models\User;
+use app\services\CategoryService;
+use app\services\ProductService;
+use app\services\UserService;
 use Yii;
 use yii\console\Controller;
 use yii\console\ExitCode;
-use yii\helpers\Json;
 
 class DataController extends Controller
 {
+    const CATEGORIES = [
+        [
+            'title' => 'Мясо',
+            'desc' => 'Для всех вкусовых предпочтений',
+            'modifier' => 'meat',
+            'wrapper' => '{"top":true,"bottom":false}',
+        ],
+        [
+            'title' => 'Овощи',
+            'desc' => 'Всегда самые свежие',
+            'modifier' => 'vegetables',
+            'wrapper' => '{"top":true,"bottom":false}',
+        ],
+        [
+            'title' => 'Все для шашлыка',
+            'desc' => 'Мангалы, уголь, вода, разжигательная смесь',                
+            'modifier' => 'kebab',
+            'wrapper' => '{"top":true,"bottom":true}',
+        ],
+        [
+            'title' => 'Услуги',
+            'desc' => 'Профессиональный мангальщик',
+            'modifier' => 'services',
+            'wrapper' => '{"top":true,"bottom":true}',
+        ],
+    ];
+
+    const PRODUCTS = [
+        [
+            'title' => 'iMac',
+            'desc' => 'херня',
+            'price' => 100,
+            'category_id' => 1,
+        ],
+        [
+            'title' => 'macBook',
+            'desc' => 'херня',
+            'price' => 100,
+            'category_id' => 1,
+        ],
+    ];
 
     public function actionImport()
     {
-        $categories = [
+        $users = [
             [
-                'title' => 'Мясо',
-                'desc' => 'Для всех вкусовых предпочтений',
-                'modifier' => 'meat',
-                'wrapper' => Json::encode(['top' => true, 'bottom' => false]),
-            ],
-            [
-                'title' => 'Овощи',
-                'desc' => 'Всегда самые свежие',
-                'modifier' => 'vegetables',
-                'wrapper' => Json::encode(['top' => false, 'bottom' => true]),
-            ],
-            [
-                'title' => 'Все для шашлыка',
-                'desc' => 'Мангалы, уголь, вода, разжигательная смесь',                
-                'modifier' => 'kebab',
-                'wrapper' => Json::encode(['top' => true, 'bottom' => true]),
-            ],
-            [
-                'title' => 'Услуги',
-                'desc' => 'Профессиональный мангальщик',
-                'modifier' => 'services',
-                'wrapper' => Json::encode(['top' => true, 'bottom' => true]),
+                'email' => 'test@example.com',
+                'password_hash' => Yii::$app->security->generatePasswordHash('123'),
+                'is_admin' => true,
             ],
         ];
 
-        $user = new User();
-        $user->email = 'test@example.com';
-        $user->password_hash = Yii::$app->security->generatePasswordHash('123');
-        $user->is_admin = true;
-        var_dump($user->save()) . "\n";
+        foreach ($users as $user) {
+            var_dump((new UserService())->create($user)) . "\n";
+        }
 
-        foreach ($categories as $category) {
-            $category_entity = new Category();
+        foreach (self::CATEGORIES as $category) {
+            var_dump((new CategoryService())->create($category)) . "\n";
+        }
 
-            $category_entity->title = $category['title'];
-            $category_entity->desc = $category['desc'];
-            $category_entity->modifier = $category['modifier'];
-            $category_entity->wrapper = $category['wrapper'];
-
-            var_dump($category_entity->save()) . "\n";
+        foreach (self::PRODUCTS as $product) {
+            var_dump((new ProductService())->create($product)) . "\n";
         }
 
         return ExitCode::OK;

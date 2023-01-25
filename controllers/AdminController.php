@@ -2,10 +2,11 @@
 
 namespace app\controllers;
 
-use app\models\Product;
+use app\models\Category;
 use app\models\User;
 use app\models\forms\LoginForm;
 use app\models\forms\ProductForm;
+use app\services\ProductService;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -42,29 +43,24 @@ class AdminController extends Controller
     public function actionIndex()
     {
         $productForm = new ProductForm();
+        $categories = Category::find()->all();
 
         if (Yii::$app->request->isPost) {
             $productForm->load(Yii::$app->request->post());
 
             if ($productForm->validate()) {
-                $product = new Product();
-
-                $product->title = $productForm->title;
-                $product->desc = $productForm->desc;
-                $product->price = $productForm->price;
-                $product->category_id = $productForm->category_id;
-
-                if ($product->save()) {
-                    Yii::$app->session->setFlash('success', 'This is the message');
+                if ((new ProductService())->create($productForm)) {
+                    Yii::$app->session->setFlash('success', 'Товар успешно добавлен');
                     $productForm->clean();
                 } else {
-                    Yii::$app->session->setFlash('danger', 'This is the message');
+                    Yii::$app->session->setFlash('danger', 'Произошла ошибка при добавлении');
                 }
             }
         }
 
         return $this->render('index', [
-            'model' => $productForm
+            'model' => $productForm,
+            'categories' => $categories
         ]);
     }
 
