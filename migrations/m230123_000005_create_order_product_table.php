@@ -16,7 +16,7 @@ class m230123_000005_create_order_product_table extends Migration
             'id' => $this->primaryKey()->unsigned(),
             'order_id' => $this->integer()->unsigned()->notNull(),
             'product_id' => $this->integer()->unsigned()->notNull(),
-            'count' => $this->integer()->unsigned()->notNull()->defaultValue(1),
+            'product_count' => $this->integer()->unsigned()->notNull()->defaultValue(1),
         ]);
 
         // creates index for column 'order_id'

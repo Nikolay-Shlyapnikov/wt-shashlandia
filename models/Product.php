@@ -34,7 +34,7 @@ class Product extends ActiveRecord
             [['desc'], 'string', 'max' => 128],
 
             [['price'], 'required'],
-            [['price'], 'integer'],
+            [['price'], 'integer', 'min' => 1],
 
             [['category_id'], 'required'],
             [['category_id'], 'integer'],
