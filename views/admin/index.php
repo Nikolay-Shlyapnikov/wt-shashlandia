@@ -1,9 +1,12 @@
 <?php
 
 /** @var yii\web\View $this */
+/** @var app\models\Category[] $categories */
+/** @var app\models\forms\ProductForm $model */
 
 use app\assets\AdminAsset;
 use app\widgets\Alert;
+use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;
@@ -38,14 +41,7 @@ AdminAsset::register($this);
                     <?= $form->field($model, 'title')->textInput() ?>
                     <?= $form->field($model, 'desc')->textInput() ?>
                     <?= $form->field($model, 'price')->textInput() ?>
-                    <?= $form->field($model, 'category_id')->textInput() ?>
-
-                    <select class="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
+                    <?= $form->field($model, 'category_id')->dropDownList(ArrayHelper::map($categories, 'id', 'title')) ?>
 
                     <div class="d-grid gap-2 mt-3">
                         <?= Html::submitButton('Войти', ['class' => 'btn btn-primary']) ?>

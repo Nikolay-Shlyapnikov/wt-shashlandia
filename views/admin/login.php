@@ -39,21 +39,6 @@ AdminAsset::register($this);
 
                 <?php ActiveForm::end(); ?>
 
-                <!-- <form novalidate autocomplete="off">
-                    <div class="mb-3">
-                        <label for="login-email" class="form-label">Email address</label>
-                        <input type="email" name="email" class="form-control" id="login-email">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="login-password" class="form-label">Password</label>
-                        <input type="password" name="password" class="form-control" id="login-password">
-                        <div class="invalid-feedback"></div>
-                    </div>
-                    <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary">Войти</button>
-                    </div>
-                </form> -->
             </div>
         </div>
     </div>
