@@ -6,11 +6,11 @@ use app\models\Category;
 
 class CategoryService
 {
-    public function create(array $category): bool
+    public function create(array $data): bool
     {
-        $category_entity = new Category();
-        $category_entity->attributes = $category;
+        $category = new Category();
+        $category->attributes = $data;
 
-        return $category_entity->save();
+        return $category->save();
     }
 }
