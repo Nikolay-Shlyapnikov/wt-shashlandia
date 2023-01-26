@@ -64,10 +64,28 @@ $config = [
                 '/login' => 'admin/login',
                 '/logout' => 'admin/logout',
 
+                // CategoryController
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'category',
+                    'only' => ['index']
+                ],
+                // SubcategoryController
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'subcategory',
+                    'only' => ['index']
+                ],
                 // OrderController
                 [
                     'class' => 'yii\rest\UrlRule',
                     'controller' => 'order',
+                    'only' => ['index', 'create']
+                ],
+                // ProductController
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'product',
                     'only' => ['index', 'create']
                 ],
             ],
