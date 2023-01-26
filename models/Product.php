@@ -13,7 +13,9 @@ use yii\db\ActiveRecord;
  * @property string $title
  * @property string $desc
  * @property int $price
- * @property int $category_id
+ * @property int $subcategory_id
+ * 
+ * @property Category $category
  */
 class Product extends ActiveRecord
 {
@@ -36,17 +38,28 @@ class Product extends ActiveRecord
             [['price'], 'required'],
             [['price'], 'integer', 'min' => 1],
 
-            [['category_id'], 'required'],
-            [['category_id'], 'integer'],
-            [['category_id'], 'exist', 'targetClass' => Category::class, 'targetAttribute' => 'id'],
+            [['subcategory_id'], 'required'],
+            [['subcategory_id'], 'integer'],
+            [['subcategory_id'], 'exist', 'targetClass' => Subcategory::class, 'targetAttribute' => 'id'],
+        ];
+    }
+
+    public function fields()
+    {
+        return [
+            'id',
+            'created_at',
+            'title',
+            'desc',
+            'price',
         ];
     }
 
     /**
      * @return ActiveQuery
      */
-    public function getCategory(): ActiveQuery
+    public function getSubcategory(): ActiveQuery
     {
-        return $this->hasOne(Category::class, ['id' => 'category_id']);
+        return $this->hasOne(Subcategory::class, ['id' => 'subcategory_id']);
     }
 }

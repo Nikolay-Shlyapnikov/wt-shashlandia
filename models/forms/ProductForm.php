@@ -2,7 +2,7 @@
 
 namespace app\models\forms;
 
-use app\models\Category;
+use app\models\Subcategory;
 use yii\base\Model;
 
 class ProductForm extends Model
@@ -10,7 +10,7 @@ class ProductForm extends Model
     public $title;
     public $desc;
     public $price;
-    public $category_id;
+    public $subcategory_id;
 
     public function rules(): array
     {
@@ -26,9 +26,9 @@ class ProductForm extends Model
             [['price'], 'required'],
             [['price'], 'integer'],
 
-            [['category_id'], 'required'],
-            [['category_id'], 'integer'],
-            [['category_id'], 'exist', 'targetClass' => Category::class, 'targetAttribute' => 'id'],
+            [['subcategory_id'], 'required'],
+            [['subcategory_id'], 'integer'],
+            [['subcategory_id'], 'exist', 'targetClass' => Subategory::class, 'targetAttribute' => 'id'],
         ];
     }
 

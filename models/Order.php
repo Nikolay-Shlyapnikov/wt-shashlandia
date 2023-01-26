@@ -15,6 +15,8 @@ use yii\db\ActiveRecord;
  * @property string $last_name
  * @property string $address
  * @property string $user_id
+ * 
+ * @property OrderProduct[] $products
  */
 class Order extends ActiveRecord
 {
@@ -48,11 +50,32 @@ class Order extends ActiveRecord
         ];
     }
 
+    public function fields()
+    {
+        return [
+            'id',
+            'created_at',
+            'phone',
+            'first_name',
+            'last_name',
+            'address',
+            'products',
+        ];
+    }
+
     /**
      * @return ActiveQuery
      */
     public function getUser(): ActiveQuery
     {
         return $this->hasOne(User::class, ['id' => 'user_id']);
+    }
+
+    /**
+     * @return ActiveQuery
+     */
+    public function getProducts(): ActiveQuery
+    {
+        return $this->hasMany(OrderProduct::class, ['order_id' => 'id']);
     }
 }

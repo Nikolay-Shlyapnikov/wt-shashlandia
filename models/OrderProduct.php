@@ -13,7 +13,7 @@ use yii\db\ActiveRecord;
  * @property int $category_id
  * @property int $product_count
  */
-class Product extends ActiveRecord
+class OrderProduct extends ActiveRecord
 {
     public static function tableName(): string
     {
@@ -33,6 +33,15 @@ class Product extends ActiveRecord
 
             [['product_count'], 'required'],
             [['product_count'], 'integer', 'min' => 1],
+        ];
+    }
+
+    public function fields()
+    {
+        return [
+            'id',
+            'order_id',
+            'product_id',
         ];
     }
 

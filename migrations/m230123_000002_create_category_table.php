@@ -14,7 +14,6 @@ class m230123_000002_create_category_table extends Migration
     {
         $this->createTable('{{%category}}', [
             'id' => $this->primaryKey()->unsigned(),
-            'created_at' => $this->timestamp()->notNull()->defaultExpression('CURRENT_TIMESTAMP'),
             'title' => $this->string(128)->notNull(),
             'desc' => $this->text()->notNull(),
             'modifier' => $this->string()->notNull(),
